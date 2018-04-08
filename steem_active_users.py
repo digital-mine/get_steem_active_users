@@ -32,10 +32,8 @@ def hour_active():
 	print ('one hour accounts',len(account))
 	print ('total accounts',len(old))
 
-#def follow():
+
 	
-
-
 counter=1
 while True:
 	print (counter)
