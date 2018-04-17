@@ -14,6 +14,7 @@ def hour_active():
 	
 	x=('follower','account','voter','from','author')
 	account=[]
+	new=[]
 	for i in x:
 		acc=re.findall('"'+i+'":"(.+?)"',str(bl))
 		for l in acc:
@@ -28,12 +29,14 @@ def hour_active():
 	for i in account:
 		if i+'\n' not in old:
 			file.write(str(i)+'\n')
+			new.append(i)
 	file.close()
 	print ('one hour accounts',len(account))
-	print ('total accounts',len(old))
-
-
+	print ('one hour brand new',len(new))
+	print ('total ACTIVE accounts',len(old))
 	
+
+
 counter=1
 while True:
 	print (counter)
@@ -46,4 +49,5 @@ while True:
 	print ('__________________________')
 	time.sleep(3600)
 
+	
 	
