@@ -34,7 +34,6 @@ def hour_active(chain):
                 old=file.readlines()
                 file.close()
                 file=open('active_acc_steem.txt','a')
-
                 for i in account:
                         if i+'\n' not in old:
                                 file.write(str(i)+'\n')
